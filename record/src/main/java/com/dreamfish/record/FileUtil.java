@@ -37,7 +37,7 @@ public class FileUtil {
             if (!fileName.endsWith(".pcm")) {
                 fileName = fileName + ".pcm";
             }
-            String fileBasePath = Environment.getExternalStorageDirectory().getAbsolutePath() + AUDIO_PCM_BASEPATH;
+            String fileBasePath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).getAbsolutePath() + AUDIO_PCM_BASEPATH;
             File file = new File(fileBasePath);
             //创建目录
             if (!file.exists()) {
@@ -62,7 +62,7 @@ public class FileUtil {
             if (!fileName.endsWith(".wav")) {
                 fileName = fileName + ".wav";
             }
-            String fileBasePath = Environment.getExternalStorageDirectory().getAbsolutePath() + AUDIO_WAV_BASEPATH;
+            String fileBasePath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).getAbsolutePath() + AUDIO_WAV_BASEPATH;
             File file = new File(fileBasePath);
             //创建目录
             if (!file.exists()) {
@@ -92,7 +92,7 @@ public class FileUtil {
      */
     public static List<File> getPcmFiles() {
         List<File> list = new ArrayList<>();
-        String fileBasePath = Environment.getExternalStorageDirectory().getAbsolutePath() + AUDIO_PCM_BASEPATH;
+        String fileBasePath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).getAbsolutePath() + AUDIO_PCM_BASEPATH;
 
         File rootFile = new File(fileBasePath);
         if (!rootFile.exists()) {
@@ -115,7 +115,7 @@ public class FileUtil {
      */
     public static List<File> getWavFiles() {
         List<File> list = new ArrayList<>();
-        String fileBasePath = Environment.getExternalStorageDirectory().getAbsolutePath() + AUDIO_WAV_BASEPATH;
+        String fileBasePath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).getAbsolutePath() + AUDIO_WAV_BASEPATH;
 
         File rootFile = new File(fileBasePath);
         if (!rootFile.exists()) {
